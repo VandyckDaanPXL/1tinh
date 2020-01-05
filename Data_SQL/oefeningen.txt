@@ -1,0 +1,19 @@
+maak een tabel met artikels
+5kolommen
+1 id max 10 kar en tekst PK
+2 naam tekst 30 kar altijd waarde hebben
+3 prijs decimaal getal 6,2 altijd grote dan 1/2
+4 datum sinds default sysdate
+5 land	2kar en moeten er 2zijn PK naar tabel countries(country_id)
+
+
+
+Create table artikels
+(artikel_id	NUMBER(10),
+artikel_naam	VARCHAR2(30) NOT NULL,
+artikel_prijs	NUMBER(6,2),
+artikel_datum	DATE DEFAULT SYSDATE),
+artikel_land	CHAR(2),
+CONSTRAINT art_art_id_PK PRIMARY KEY(artikel_id),
+CONSTRAINT art_art_land_FK FOREIGN KEY (artikel_land)references countries (country_id))
+

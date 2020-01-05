@@ -1,0 +1,9 @@
+alter table reservations
+add (constraint res_national_id_fk)
+FOREIGN KEY (national_id)
+REFERENCES members (national_id)
+, constraint res_sport_id_fk
+FOREIGN KEY (sport_id)
+REFERENCES activities (sport_id)
+)
+/
